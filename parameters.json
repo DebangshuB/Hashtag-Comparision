@@ -1,0 +1,18 @@
+{
+    "hashtags": [
+        "#ThursdayThoughts",
+        "#FancyaMcDonalds",
+        "#YorkshireInSongOrFilm"
+    ],
+    "topic-name": {
+        "tweets": "kafka-tweets",
+        "batches": "kafka-batches"
+    },
+    "topic-name-batches": "kafka-batches",
+    "bootstrap-servers": ["localhost:29092"],
+    "auto-offset-reset": {
+        "processor": "latest",
+        "consumer": "latest"
+    },
+    "enable-auto-commit": true
+}
