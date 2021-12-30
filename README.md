@@ -19,7 +19,7 @@ The following shows the result for a time period of 30 seconds for 2 hashtags.
 Using Tweepy Streaming, live tweets on a pre-defined list of hashtags were parsed and sent to a Kafka topic.
 
 ## Processor
-The live tweet stream is read from the Kafka topic and aggregated to provide the number of tweets in the given time frame and the average sentiment (using TextBlob) for a given hashtag(s).
+The live tweet stream is read from the Kafka topic and aggregated to provide the number of tweets in the given time frame and the average sentiment (using TextBlob, ranges from -1 to 1) for a given hashtag(s).
 The aggregation is done on Spark using PySpark in python and sent to another Kafka topic.
 
 ## Consumer
