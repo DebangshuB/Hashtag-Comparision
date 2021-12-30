@@ -41,6 +41,5 @@ for message in consumer:
     message["window"]["end"] = datetime.strptime(message["window"]["end"], "%Y-%m-%dT%H:%M:%S.%f%z")
     message["window"]["start"] = datetime.strptime(message["window"]["start"], "%Y-%m-%dT%H:%M:%S.%f%z")
     
-    print(datetime.now(), message["window"]["start"])
     id_ = coll.insert_one(message)
     print("Inserted {} at {}".format(id_.inserted_id, datetime.now()))
